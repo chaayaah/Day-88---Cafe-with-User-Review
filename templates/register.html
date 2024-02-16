@@ -1,0 +1,12 @@
+{% from "bootstrap5/form.html" import render_form %}
+{% block content %}
+{% include "header.html" %}
+
+<div class="container d-flex align-items-center py-4 bg-body-tertiary">
+    <div class="form-signin w-100 m-auto">
+        {{render_form(form, novalidate=True, button_map={"submit": "primary"}) }}
+
+    </div>
+</div>
+{% endblock content %}
+{% include "footer.html" %}
